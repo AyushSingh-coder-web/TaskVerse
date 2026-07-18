@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TaskVerse — Smart To-Do & Task Manager</title>
+
+<meta name="description" content="TaskVerse is a sleek, dark-themed task manager with neon accents. Organize your day, track progress, and never miss a deadline.">
+<meta name="author" content="Ayush Singh">
+<meta name="theme-color" content="#0a0f1e">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+<style>
+
+</style>
+
+</head>
+
+<body>
+
+  <div class="splash" id="splash" loading="lazy">
+  <div class="splash-inner">
+    <div class="splash-logo">
+      <i class="fas fa-list-check"></i>
+    </div>
+    <h1>TaskVerse</h1>
+    <p>Stay on top of your day</p>
+    <div class="splash-bar">
+      <div class="splash-bar-fill"></div>
+      
+    </div>
+    
+    <p style="color: aqua; ">Loading.....</p>
+    <br>
+    <br>
+    <div id="org">
+      <p>Organize your tasks.</p>
+      <br>
+    <p style="color: rgb(32, 195, 220);">Smplify your life.</p>
+    <br>
+    <p class="dev-copyright">&copy;ALL RIGHT RESERVED. DESIGNED AND DEVELOPED BY MR AYUSH SINGH</p>
+    </div>
+    <br>
+    <br>
+  </div>
+</div>
+<div class="app" id="app">
+
+<!-- mobile topbar -->
+<header class="topbar resp">
+  <button class="icon-btn" id="menuToggle" aria-label="Open menu">
+    <i class="fas fa-bars"></i>
+  </button>
+  <span class="brand-name">TaskVerse</span>
+</header>
+
+<div class="overlay resp" id="overlay"></div>
+
+<!-- sidebar -->
+<aside class="sidebar" id="sidebar">
+
+  <div class="sidebar-top">
+    <div class="brand-icon">
+      <i class="fas fa-list-check"></i>
+    </div>
+    <div>
+      <h1 class="brand">TaskVerse</h1>
+      <p class="brand-motto">Stay on top of your day</p>
+    </div>
+  </div>
+
+  <nav class="sidebar-navbar">
+    <p class="nav-label">Tasks</p>
+
+    <button class="nav-item active" data-view="myday">
+      <i class="far fa-calendar-check"></i>
+      <span>My Day</span>
+      <span class="badge" data-count="myday"></span>
+    </button>
+
+    <button class="nav-item" data-view="all">
+      <i class="fas fa-inbox"></i>
+      <span>All Tasks</span>
+      <span class="badge" data-count="all"></span>
+    </button>
+
+    <button class="nav-item" data-view="important">
+      <i class="far fa-star"></i>
+      <span>Important</span>
+      <span class="badge" data-count="important"></span>
+    </button>
+
+    <button class="nav-item" data-view="completed">
+      <i class="fas fa-check-circle"></i>
+      <span>Completed</span>
+      <span class="badge" data-count="completed"></span>
+    </button>
+
+    <p class="nav-label" id="my-list">My Lists</p>
+
+    <button class="nav-item" data-view="personal">
+      <span class="dot dot-personal"></span>
+      <span>Personal</span>
+      <span class="badge" data-count="personal"></span>
+    </button>
+
+    <button class="nav-item" data-view="work">
+      <span class="dot dot-work"></span>
+      <span>Work</span>
+      <span class="badge" data-count="work"></span>
+    </button>
+
+    <button class="nav-item" data-view="shopping">
+      <span class="dot dot-shopping"></span>
+      <span>Shopping</span>
+      <span class="badge" data-count="shopping"></span>
+    </button>
+  </nav>
+
+  <div class="sidebar-footer">
+    <div class="progress-card">
+      <div class="progress-card-row">
+        <span>Today's progress</span>
+        <strong id="progressPercent">0%</strong>
+      </div>
+      <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+      <p class="progress-note" id="progressNote">0 of 0 tasks done</p>
+    </div>
+    <div class="dev-info">
+      <p class="dev-copyright">&copy;ALL RIGHT RESERVED. DESIGNED AND DEVELOPED BY MR AYUSH SINGH</p>
+    </div>
+  </div>
+
+</aside>
+
+<!-- main area -->
+<main class="main">
+
+  <header class="main-header">
+    <div>
+      <h2 id="titleOfPage">My Day</h2>
+      <p id="todayDate" class="today-date"></p>
+    </div>
+  </header>
+
+  <form class="add-task" id="taskForm" autocomplete="off">
+    <div class="add-task-input-whole">
+      <i class="fas fa-plus"></i>
+      <input type="text" id="taskInput" placeholder="Add a new task…" maxlength="120">
+    </div>
+    <select id="listSelect" aria-label="List">
+      <option value="personal">Personal</option>
+      <option value="work">Work</option>
+      <option value="shopping">Shopping</option>
+    </select>
+    <select id="prioritySelect" aria-label="Priority">
+      <option value="low">Low</option>
+      <option value="medium" selected>Medium</option>
+      <option value="high">High</option>
+    </select>
+    <button type="submit" class="btn-primary">Add Task</button>
+  </form>
+
+  <section class="task-list" id="taskList"></section>
+
+  <div class="empty" id="emptyState" hidden>
+    <div class="empty-icon">
+      <i class="fas fa-clipboard-check"></i>
+    </div>
+    <h3 id="emptyTitle">All clear!</h3>
+    <p id="emptyText">No tasks here. Add one above to get started.</p>
+  </div>
+
+  <footer class="main-footer">
+    <div class="action-clear-task">
+      <span id="remainingText">0 tasks remaining</span>
+      <button class="btn-ghost" id="clearCompleted">Clear completed</button>
+    </div>
+  </footer>
+
+</main>
+
+</div>
+<!-- ADD THIS before script.js -->
+<script>
+const splash = document.getElementById('splash');
+const app = document.getElementById('app');
+
+setTimeout(() => { app.classList.add('show'); }, 100);
+setTimeout(() => { splash.classList.add('done'); }, 2000);
+</script>
+
+<!-- your existing script -->
+<script src="script.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
