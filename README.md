@@ -20,7 +20,7 @@ A modern, responsive, and smart task management web application built from scrat
 
 ### Mobile Dashboard
 <p align="center">
-  <img src="assets/mobile-screen-dashboard.png" alt="TaskVerse Mobile Dashboard" width="340">
+  <img src="assets/mobile-screen-dashboard.jpg" alt="TaskVerse Mobile Dashboard" width="340">
 </p>
 
 ---
