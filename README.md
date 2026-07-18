@@ -7,7 +7,7 @@ A modern, responsive, and smart task management web application built from scrat
 Experience the live application here: TaskVerse Live Demo (https://taskverse-smart-task-manager.netlify.app/)
 
 <p align="center">
-  <img src="assets/Dashboard Screenshot" alt="TaskVerse Dashboard" width="800">
+  <img src="assets/Dashboard%20Screenshot%20.png" alt="TaskVerse Dashboard" width="800">
 </p>
 
 
