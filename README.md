@@ -43,7 +43,8 @@ Experience the live application here: **[TaskVerse Live Demo](https://taskverse-
 * **HTML5:** Semantic structure of the web application.
 * **CSS3:** Styling, modern layouts, and responsive design.
 * **JavaScript (ES6+):** Core functionality, DOM manipulation, and local storage management.
-
+* **Local Storage:** Saves tasks in the browser so data persists on refresh.
+* **Responsive Design:** Optimized interface for seamless use on mobile and desktop
 ---
 
 ## 📖 Usage
