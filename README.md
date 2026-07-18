@@ -10,6 +10,9 @@ Experience the live application here: TaskVerse Live Demo (https://taskverse-sma
   <img src="assets/Dashboard%20Screenshot%20.png" alt="TaskVerse Dashboard" width="800">
 </p>
 
+<p align="center">
+  <img src="assets/mobile-dashboard-screenshot.png" alt="mobile TaskVerse Dashboard" width="800">
+</p>
 
 🌟 FeaturesTask 
 
