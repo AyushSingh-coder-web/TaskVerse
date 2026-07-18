@@ -1,11 +1,9 @@
 # TaskVerse 🚀
 
 A modern, responsive, and smart task management web application built from scratch to help you organize daily workflows, track deadlines, and boost productivity.
-
-## 🔗 Live Demo
-
-Experience the live application here: **[TaskVerse Live Demo](https://taskverse-smart-task-manager.netlify.app/)**
-
+---
+> **Note**
+> This project was developed as part of my frontend web development internship at **Thiranex Skill Development and Future Tech**.
 ---
 
 ## 📸 Screenshots
@@ -31,7 +29,6 @@ Experience the live application here: **[TaskVerse Live Demo](https://taskverse-
 
 * **Task CRUD Operations:** Seamlessly add, view, edit, and delete tasks.
 * **Smart Categorization & Priority:** Organize tasks with customizable categories and priority levels (High, Medium, Low).
-* **Due Date Tracking:** Integrated calendar and deadline tracking to keep you on schedule.
 * **Search & Filter:** Quickly locate specific tasks using keyword search or dynamic filters (All, Pending, Completed).
 * **Local Storage Persistence:** Your tasks are securely saved in your browser, ensuring no data is lost on refresh.
 * **Responsive Design:** A sleek, mobile-friendly interface optimized for mobile phones, tablets, and desktop displays.
